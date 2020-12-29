@@ -1,0 +1,33 @@
+function consultarCep() {
+    var cep = document.getElementById("cep");
+    var url = "https://viacep.com.br/ws/" + cep.value + "/json/";
+    
+    console.log(typeof(cep.value));
+    //console.log(cep);
+    //console.log(url);
+    
+
+    if (cep == undefined){
+        alert("Cep null: " + cep);
+/*    }else{
+        $.ajax({
+            //url: "https://viacep.com.br/ws/37132202/json/",
+            url: url,
+            type: "GET",
+            success: function (response) {
+                console.log(response);
+                if (response.erro != true){
+                    $("#logradouro").html(response.logradouro);
+                    $("#bairro").html(response.bairro);
+                    $("#localidade").html(response.localidade);
+                    $("#uf").html(response.uf);
+                }else{
+                    alert("CEP não encontrado!");
+                }
+    
+    
+            }
+       })
+*/    }
+    
+}
